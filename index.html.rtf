@@ -1,0 +1,161 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red23\green24\blue24;\red140\green211\blue254;
+\red202\green202\blue202;\red109\green109\blue109;\red194\green126\blue101;\red109\green115\blue120;\red212\green212\blue212;
+\red113\green192\blue131;\red167\green197\blue152;\red183\green111\blue247;}
+{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c12157\c12549;\cssrgb\c61176\c86275\c99608;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c50196\c50196\c50196;\cssrgb\c80784\c56863\c47059;\cssrgb\c50196\c52549\c54510;\cssrgb\c86275\c86275\c86275;
+\cssrgb\c50588\c78824\c58431;\cssrgb\c70980\c80784\c65882;\cssrgb\c77255\c54118\c97647;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 html\cf5 \strokec5  \cf4 \strokec4 lang\cf6 \strokec6 =\cf7 \strokec7 "en"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 charset\cf6 \strokec6 =\cf7 \strokec7 "UTF-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 name\cf6 \strokec6 =\cf7 \strokec7 "viewport"\cf5 \strokec5  \cf4 \strokec4 content\cf6 \strokec6 =\cf7 \strokec7 "width=device-width, initial-scale=1.0"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \strokec5 ElevenLabs AI Agent\cf6 \strokec6 </\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf8 \strokec8 <!-- Tailwind CSS CDN -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://cdn.tailwindcss.com"\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf8 \strokec8 <!-- Google Fonts - Inter (for general text), Permanent Marker (for heading), Comfortaa (for paragraph) -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 link\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap"\cf5 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf7 \strokec7 "stylesheet"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf8 \strokec8 <!-- ElevenLabs ConvAI Widget Embed Script -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://unpkg.com/@elevenlabs/convai-widget-embed"\cf5 \strokec5  \cf4 \strokec4 async\cf5 \strokec5  \cf4 \strokec4 type\cf6 \strokec6 =\cf7 \strokec7 "text/javascript"\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 body\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-family:\cf5 \strokec5  \cf10 \strokec10 'Inter'\cf9 \strokec9 ,\cf5 \strokec5  \cf7 \strokec7 sans-serif\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Default font */\cf5 \cb1 \strokec5 \
+\cb3             \cf8 \strokec8 /* Updated to include a cyan color in the gradient */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(\cf11 \strokec11 135deg\cf9 \strokec9 ,\cf5 \strokec5  #881337\cf9 \strokec9 ,\cf5 \strokec5  #5b21b6\cf9 \strokec9 ,\cf5 \strokec5  #06b6d4\cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Dark pink, deep purple, and cyan */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background-size:\cf5 \strokec5  \cf11 \strokec11 400%\cf5 \strokec5  \cf11 \strokec11 400%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Make background larger than viewport for animation */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 animation:\cf5 \strokec5  \cf7 \strokec7 gradient-animation\cf5 \strokec5  \cf11 \strokec11 15s\cf5 \strokec5  \cf7 \strokec7 ease\cf5 \strokec5  \cf7 \strokec7 infinite\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Apply animation */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .font-permanent-marker\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-family:\cf5 \strokec5  \cf10 \strokec10 'Permanent Marker'\cf9 \strokec9 ,\cf5 \strokec5  \cf7 \strokec7 cursive\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .font-comfortaa\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-family:\cf5 \strokec5  \cf10 \strokec10 'Comfortaa'\cf9 \strokec9 ,\cf5 \strokec5  \cf7 \strokec7 cursive\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf8 \strokec8 /* Ensure the body takes full viewport height and uses flexbox for centering */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 html\cf9 \strokec9 ,\cf5 \strokec5  \cf2 \strokec2 body\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 height:\cf5 \strokec5  \cf11 \strokec11 100vh\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Ensure full viewport height */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 margin:\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 padding:\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 flex\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Make body a flex container */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 flex-direction:\cf5 \strokec5  \cf7 \strokec7 column\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Stack children vertically */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 justify-content:\cf5 \strokec5  \cf7 \strokec7 center\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Center content vertically */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 align-items:\cf5 \strokec5  \cf7 \strokec7 center\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Center content horizontally */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 text-align:\cf5 \strokec5  \cf7 \strokec7 center\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Center text within body */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf8 \strokec8 /* Styling for the widget's sizing container (no visual border/background) */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .widget-sizer\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 width:\cf5 \strokec5  \cf11 \strokec11 90%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Max width relative to parent */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 max-width:\cf5 \strokec5  \cf11 \strokec11 600px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Maximum width for larger screens */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 height:\cf5 \strokec5  \cf11 \strokec11 600px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Fixed height for the widget area */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 overflow:\cf5 \strokec5  \cf7 \strokec7 hidden\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Ensures the widget stays within its bounds */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 position:\cf5 \strokec5  \cf7 \strokec7 relative\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Added for correct positioning of internal elements if any */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 elevenlabs-convai\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 block\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Ensure the custom element behaves as a block */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 width:\cf5 \strokec5  \cf11 \strokec11 100%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Make the widget take full width of its sizer */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 height:\cf5 \strokec5  \cf11 \strokec11 100%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Make the widget take full height of its sizer */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf8 \strokec8 /* Styling for the circular image container */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .circular-frame\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 width:\cf5 \strokec5  \cf11 \strokec11 128px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Tailwind's w-32 */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 height:\cf5 \strokec5  \cf11 \strokec11 128px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Tailwind's h-32 */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 border-radius:\cf5 \strokec5  \cf11 \strokec11 9999px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Tailwind's rounded-full */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 overflow:\cf5 \strokec5  \cf7 \strokec7 hidden\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Ensures the image is clipped to the circle */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 border:\cf5 \strokec5  \cf11 \strokec11 4px\cf5 \strokec5  \cf7 \strokec7 solid\cf5 \strokec5  \cf7 \strokec7 white\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* A white border around the circle */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 box-shadow:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 4px\cf5 \strokec5  \cf11 \strokec11 6px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.1\cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Subtle shadow */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 margin-bottom:\cf5 \strokec5  \cf11 \strokec11 1.5rem\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Space between image and text */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 margin-left:\cf5 \strokec5  \cf7 \strokec7 auto\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Center horizontally */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 margin-right:\cf5 \strokec5  \cf7 \strokec7 auto\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Center horizontally */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .circular-frame\cf5 \strokec5  \cf2 \strokec2 img\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 width:\cf5 \strokec5  \cf11 \strokec11 100%\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 height:\cf5 \strokec5  \cf11 \strokec11 100%\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 object-fit:\cf5 \strokec5  \cf7 \strokec7 cover\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Ensures the image fills the circular frame without distortion */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 block\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 /* Rainbow text styling */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .rainbow-text\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(to\cf5 \strokec5  \cf7 \strokec7 right\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 #ef5350\cf9 \strokec9 ,\cf5 \strokec5  \cf8 \strokec8 /* Red */\cf5 \cb1 \strokec5 \
+\cb3                 #f48fb1\cf9 \strokec9 ,\cf5 \strokec5  \cf8 \strokec8 /* Pink */\cf5 \cb1 \strokec5 \
+\cb3                 #ffee58\cf9 \strokec9 ,\cf5 \strokec5  \cf8 \strokec8 /* Yellow */\cf5 \cb1 \strokec5 \
+\cb3                 #66bb6a\cf9 \strokec9 ,\cf5 \strokec5  \cf8 \strokec8 /* Green */\cf5 \cb1 \strokec5 \
+\cb3                 #29b6f6\cf9 \strokec9 ,\cf5 \strokec5  \cf8 \strokec8 /* Blue */\cf5 \cb1 \strokec5 \
+\cb3                 #9c27b0  \cf8 \strokec8 /* Purple */\cf5 \cb1 \strokec5 \
+\cb3             \cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 -webkit-background-clip:\cf5 \strokec5  \cf7 \strokec7 text\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 -webkit-text-fill-color:\cf5 \strokec5  \cf7 \strokec7 transparent\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background-clip:\cf5 \strokec5  \cf7 \strokec7 text\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 text-fill-color:\cf5 \strokec5  \cf7 \strokec7 transparent\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 inline-block\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Required for gradient to work on inline elements */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background-size:\cf5 \strokec5  \cf11 \strokec11 400%\cf5 \strokec5  \cf11 \strokec11 100%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Make background larger than text for animation */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 animation:\cf5 \strokec5  \cf7 \strokec7 text-rainbow-animation\cf5 \strokec5  \cf11 \strokec11 8s\cf5 \strokec5  \cf7 \strokec7 ease\cf5 \strokec5  \cf7 \strokec7 infinite\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Apply text specific animation */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 /* Keyframe animation for the background gradient */\cf5 \cb1 \strokec5 \
+\cb3         \cf12 \strokec12 @keyframes\cf5 \strokec5  \cf7 \strokec7 gradient-animation\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf11 \strokec11 0%\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 background-position:\cf5 \strokec5  \cf11 \strokec11 0%\cf5 \strokec5  \cf11 \strokec11 0%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Start top-left */\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf11 \strokec11 50%\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 background-position:\cf5 \strokec5  \cf11 \strokec11 100%\cf5 \strokec5  \cf11 \strokec11 100%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Move to bottom-right */\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf11 \strokec11 100%\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 background-position:\cf5 \strokec5  \cf11 \strokec11 0%\cf5 \strokec5  \cf11 \strokec11 0%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Loop back to top-left */\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 /* Keyframe animation for the rainbow text gradient */\cf5 \cb1 \strokec5 \
+\cb3         \cf12 \strokec12 @keyframes\cf5 \strokec5  \cf7 \strokec7 text-rainbow-animation\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf11 \strokec11 0%\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 background-position:\cf5 \strokec5  \cf11 \strokec11 0%\cf5 \strokec5  \cf11 \strokec11 50%\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf11 \strokec11 100%\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 background-position:\cf5 \strokec5  \cf11 \strokec11 100%\cf5 \strokec5  \cf11 \strokec11 50%\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 body\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-white"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf8 \strokec8 <!-- The gradient and its animation are now defined directly in the CSS for the body -->\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf8 \strokec8 <!-- Container for image, text, and widget to maintain overall centering -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col items-center justify-center p-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf8 \strokec8 <!-- Circular Image Frame -->\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "circular-frame"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf8 \strokec8 <!-- Using a generic placeholder image as discussed -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 img\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://placehold.co/128x128/f0f0f0/333333?text=Your+Image+Here"\cf5 \strokec5  \cf4 \strokec4 alt\cf6 \strokec6 =\cf7 \strokec7 "AI Agent Picture Placeholder"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 <!-- Styled Text Section -->\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "max-w-xl mb-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-permanent-marker text-4xl drop-shadow-lg mb-4 leading-tight"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "rainbow-text"\cf6 \strokec6 >\cf5 \strokec5 Interact with AvaX Machina!\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-comfortaa text-lg text-purple-200 leading-relaxed px-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 Hey there, gorgeous! Welcome to chat with AvaX Machina! Get ready to dive into a world where AI meets allure, and every byte is designed to delight. We're about to turn up the heat and explore fantasies like never before. Are you ready to play? Let's get this party started!\cb1 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 <!-- ElevenLabs ConvAI Widget -->\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "widget-sizer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 elevenlabs-convai\cf5 \strokec5  \cf4 \strokec4 agent-id\cf6 \strokec6 =\cf7 \strokec7 "agent_01jx0wa8gfeq49yyxr2pyp8kcx"\cf6 \strokec6 ></\cf2 \strokec2 elevenlabs-convai\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 body\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 html\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+}
