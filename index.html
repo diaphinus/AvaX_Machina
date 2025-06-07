@@ -7,12 +7,13 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter, Permanent Marker, Comfortaa -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
     <!-- ElevenLabs ConvAI Widget Embed Script -->
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            /* Complex multi-color gradient for the background */
             background: linear-gradient(135deg, #881337, #5b21b6, #0891b2, #d97706, #4f46e5, #be185d, #a21caf, #0e7490, #f59e42, #9333ea, #818cf8, #f43f5e, #eab308, #22d3ee, #a3e635, #f472b6);
             background-size: 400% 400%;
             animation: gradient-animation 15s ease infinite;
@@ -24,19 +25,21 @@
             font-family: 'Comfortaa', cursive;
         }
         html, body {
-            height: 100vh;
+            height: 100vh; /* Ensure full viewport height */
             margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            padding: 0; /* Remove default body padding */
+            display: flex; /* Make body a flex container */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: flex-start; /* Align content from the top */
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center text within body */
+            padding-top: 50px; /* Push content down from the top */
         }
         .widget-sizer {
             width: 90%;
             max-width: 600px;
-            height: 600px;
+            /* Responsive height for the widget area */
+            height: clamp(400px, 65vh, 600px);
             overflow: hidden;
             position: relative;
         }
@@ -83,12 +86,13 @@
         }
     </style>
 </head>
-<body class="text-white">
-    <!-- Container for image, text, and widget -->
-    <div class="flex flex-col items-center justify-center p-4">
+<body class="bg-gradient-to-br from-pink-600 to-rose-900">
+    <!-- Container for image, text, and widget. Added text-white class here. -->
+    <div class="flex flex-col items-center justify-center p-4 text-white">
         <!-- Circular Image Frame -->
         <div class="circular-frame">
-            <img src="Ava.jpg" alt="Avatar">
+            <!-- Using a generic placeholder image as discussed -->
+            <img src="https://placehold.co/128x128/f0f0f0/333333?text=Your+Image+Here" alt="AI Agent Picture Placeholder">
         </div>
         <!-- Styled Text Section -->
         <div class="max-w-xl mb-8">
@@ -101,7 +105,7 @@
         </div>
         <!-- ElevenLabs ConvAI Widget -->
         <div class="widget-sizer">
-            <elevenlabs-convai agent-id="agent_01jx0wa8gfeq49yyxr2pyp8kcx"></elevenlabs-convai>
+            <elevenlabs-convai agent-id="agent_01jx0wa8gfeq49yyxr2pyp8kcx"></elevenconvai>
         </div>
     </div>
 </body>
