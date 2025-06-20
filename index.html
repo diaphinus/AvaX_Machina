@@ -1,80 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AvaX_Machina Subscription</title>
-</head>
-<body>
-    <h1>Choose Your Subscription Plan</h1>
-    <p>Unlock premium features with our monthly subscription.</p>
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red23\green24\blue24;\red140\green211\blue254;
+\red202\green202\blue202;\red109\green109\blue109;\red194\green126\blue101;\red109\green115\blue120;\red212\green212\blue212;
+\red113\green192\blue131;\red167\green197\blue152;\red183\green111\blue247;}
+{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c12157\c12549;\cssrgb\c61176\c86275\c99608;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c50196\c50196\c50196;\cssrgb\c80784\c56863\c47059;\cssrgb\c50196\c52549\c54510;\cssrgb\c86275\c86275\c86275;
+\cssrgb\c50588\c78824\c58431;\cssrgb\c70980\c80784\c65882;\cssrgb\c77255\c54118\c97647;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
 
-    <div style="max-width: 300px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; text-align: center;">
-        <h2>Premium Plan</h2>
-        <p>Access to all AvaX_Machina features, unlimited queries.</p>
-        <p><strong>$X.XX/month</strong></p>
-        <div id="paypal-button-container-P-7RG75175XD3884154NBK4J2Q"></div>
-    </div>
-
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-    <script>
-        // Replace 'YOUR_PAYPAL_CLIENT_ID' and 'YOUR_BACKEND_API_URL'
-        const PAYPAL_PLAN_ID = 'P-7RG75175XD3884154NBK4J2Q'; // Your plan ID from PayPal
-        const YOUR_BACKEND_API_URL = 'https://your-serverless-domain.com/api/paypal-subscription-approved';
-
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'subscribe'
-            },
-            createSubscription: function(data, actions) {
-                return actions.subscription.create({
-                    plan_id: PAYPAL_PLAN_ID
-                });
-            },
-            onApprove: function(data, actions) {
-                const userAuthToken = localStorage.getItem('userAuthToken');
-                if (!userAuthToken) {
-                    alert('You must be logged in to subscribe.');
-                    return;
-                }
-                fetch(YOUR_BACKEND_API_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${userAuthToken}`
-                    },
-                    body: JSON.stringify({
-                        paypalSubscriptionID: data.subscriptionID,
-                    })
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        return response.json().then(err => { throw new Error(err.message || 'Server error'); });
-                    }
-                    return response.json();
-                })
-                .then(serverData => {
-                    if (serverData.success) {
-                        alert('Subscription successful! You now have premium access.');
-                        window.location.href = '/dashboard?status=subscribed';
-                    } else {
-                        alert(`Subscription failed: ${serverData.message}. Please contact support.`);
-                    }
-                })
-                .catch(error => {
-                    alert('An unexpected error occurred during subscription. Please try again.');
-                });
-            },
-            onCancel: function(data) {
-                alert('Subscription process cancelled.');
-            },
-            onError: function(err) {
-                alert('An error occurred with the PayPal button. Please try again.');
-            }
-        }).render('#paypal-button-container-P-7RG75175XD3884154NBK4J2Q');
-    </script>
-</body>
-</html>
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+<!DOCTYPE\cf4  html\cf2 >\cf5 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 <\cf2 html\cf5  \cf4 lang\cf6 =\cf7 "en"\cf6 >\cf5 \cb1 \
+\cf6 \cb3 <\cf2 head\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 meta\cf5  \cf4 charset\cf6 =\cf7 "UTF-8"\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 meta\cf5  \cf4 name\cf6 =\cf7 "viewport"\cf5  \cf4 content\cf6 =\cf7 "width=device-width, initial-scale=1.0"\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 title\cf6 >\cf5 ElevenLabs AI Agent\cf6 </\cf2 title\cf6 >\cf5 \cb1 \
+\cb3     \cf8 <!-- Tailwind CSS CDN -->\cf5 \cb1 \
+\cb3     \cf6 <\cf2 script\cf5  \cf4 src\cf6 =\cf7 "https://cdn.tailwindcss.com"\cf6 ></\cf2 script\cf6 >\cf5 \cb1 \
+\cb3     \cf8 <!-- Google Fonts - Inter (for general text), Permanent Marker (for heading), Comfortaa (for paragraph) -->\cf5 \cb1 \
+\cb3     \cf6 <\cf2 link\cf5  \cf4 href\cf6 =\cf7 "https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap"\cf5  \cf4 rel\cf6 =\cf7 "stylesheet"\cf6 >\cf5 \cb1 \
+\cb3     \cf8 <!-- ElevenLabs ConvAI Widget Embed Script -->\cf5 \cb1 \
+\cb3     \cf6 <\cf2 script\cf5  \cf4 src\cf6 =\cf7 "https://unpkg.com/@elevenlabs/convai-widget-embed"\cf5  \cf4 async\cf5  \cf4 type\cf6 =\cf7 "text/javascript"\cf6 ></\cf2 script\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 style\cf6 >\cf5 \cb1 \
+\cb3         \cf2 body\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 font-family:\cf5  \cf10 'Inter'\cf9 ,\cf5  \cf7 sans-serif\cf9 ;\cf5  \cf8 /* Default font */\cf5 \cb1 \
+\cb3             \cf8 /* Updated to include a cyan color in the gradient */\cf5 \cb1 \
+\cb3             \cf4 background:\cf5  \cf7 linear-gradient(\cf11 135deg\cf9 ,\cf5  #881337\cf9 ,\cf5  #5b21b6\cf9 ,\cf5  #06b6d4\cf7 )\cf9 ;\cf5  \cf8 /* Dark pink, deep purple, and cyan */\cf5 \cb1 \
+\cb3             \cf4 background-size:\cf5  \cf11 400%\cf5  \cf11 400%\cf9 ;\cf5  \cf8 /* Make background larger than viewport for animation */\cf5 \cb1 \
+\cb3             \cf4 animation:\cf5  \cf7 gradient-animation\cf5  \cf11 15s\cf5  \cf7 ease\cf5  \cf7 infinite\cf9 ;\cf5  \cf8 /* Apply animation */\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3         \cf2 .font-permanent-marker\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 font-family:\cf5  \cf10 'Permanent Marker'\cf9 ,\cf5  \cf7 cursive\cf9 ;\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3         \cf2 .font-comfortaa\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 font-family:\cf5  \cf10 'Comfortaa'\cf9 ,\cf5  \cf7 cursive\cf9 ;\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3         \cf8 /* Ensure the body takes full viewport height and uses flexbox for centering */\cf5 \cb1 \
+\cb3         \cf2 html\cf9 ,\cf5  \cf2 body\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 height:\cf5  \cf11 100vh\cf9 ;\cf5  \cf8 /* Ensure full viewport height */\cf5 \cb1 \
+\cb3             \cf4 margin:\cf5  \cf11 0\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 padding:\cf5  \cf11 0\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 display:\cf5  \cf7 flex\cf9 ;\cf5  \cf8 /* Make body a flex container */\cf5 \cb1 \
+\cb3             \cf4 flex-direction:\cf5  \cf7 column\cf9 ;\cf5  \cf8 /* Stack children vertically */\cf5 \cb1 \
+\cb3             \cf4 justify-content:\cf5  \cf7 center\cf9 ;\cf5  \cf8 /* Center content vertically */\cf5 \cb1 \
+\cb3             \cf4 align-items:\cf5  \cf7 center\cf9 ;\cf5  \cf8 /* Center content horizontally */\cf5 \cb1 \
+\cb3             \cf4 text-align:\cf5  \cf7 center\cf9 ;\cf5  \cf8 /* Center text within body */\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3         \cf8 /* Styling for the widget's sizing container (no visual border/background) */\cf5 \cb1 \
+\cb3         \cf2 .widget-sizer\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 width:\cf5  \cf11 90%\cf9 ;\cf5  \cf8 /* Max width relative to parent */\cf5 \cb1 \
+\cb3             \cf4 max-width:\cf5  \cf11 600px\cf9 ;\cf5  \cf8 /* Maximum width for larger screens */\cf5 \cb1 \
+\cb3             \cf4 height:\cf5  \cf11 600px\cf9 ;\cf5  \cf8 /* Fixed height for the widget area */\cf5 \cb1 \
+\cb3             \cf4 overflow:\cf5  \cf7 hidden\cf9 ;\cf5  \cf8 /* Ensures the widget stays within its bounds */\cf5 \cb1 \
+\cb3             \cf4 position:\cf5  \cf7 relative\cf9 ;\cf5  \cf8 /* Added for correct positioning of internal elements if any */\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3         \cf2 elevenlabs-convai\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 display:\cf5  \cf7 block\cf9 ;\cf5  \cf8 /* Ensure the custom element behaves as a block */\cf5 \cb1 \
+\cb3             \cf4 width:\cf5  \cf11 100%\cf9 ;\cf5  \cf8 /* Make the widget take full width of its sizer */\cf5 \cb1 \
+\cb3             \cf4 height:\cf5  \cf11 100%\cf9 ;\cf5  \cf8 /* Make the widget take full height of its sizer */\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3         \cf8 /* Styling for the circular image container */\cf5 \cb1 \
+\cb3         \cf2 .circular-frame\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 width:\cf5  \cf11 128px\cf9 ;\cf5  \cf8 /* Tailwind's w-32 */\cf5 \cb1 \
+\cb3             \cf4 height:\cf5  \cf11 128px\cf9 ;\cf5  \cf8 /* Tailwind's h-32 */\cf5 \cb1 \
+\cb3             \cf4 border-radius:\cf5  \cf11 9999px\cf9 ;\cf5  \cf8 /* Tailwind's rounded-full */\cf5 \cb1 \
+\cb3             \cf4 overflow:\cf5  \cf7 hidden\cf9 ;\cf5  \cf8 /* Ensures the image is clipped to the circle */\cf5 \cb1 \
+\cb3             \cf4 border:\cf5  \cf11 4px\cf5  \cf7 solid\cf5  \cf7 white\cf9 ;\cf5  \cf8 /* A white border around the circle */\cf5 \cb1 \
+\cb3             \cf4 box-shadow:\cf5  \cf11 0\cf5  \cf11 4px\cf5  \cf11 6px\cf5  \cf7 rgba(\cf11 0\cf9 ,\cf5  \cf11 0\cf9 ,\cf5  \cf11 0\cf9 ,\cf5  \cf11 0.1\cf7 )\cf9 ;\cf5  \cf8 /* Subtle shadow */\cf5 \cb1 \
+\cb3             \cf4 margin-bottom:\cf5  \cf11 1.5rem\cf9 ;\cf5  \cf8 /* Space between image and text */\cf5 \cb1 \
+\cb3             \cf4 margin-left:\cf5  \cf7 auto\cf9 ;\cf5  \cf8 /* Center horizontally */\cf5 \cb1 \
+\cb3             \cf4 margin-right:\cf5  \cf7 auto\cf9 ;\cf5  \cf8 /* Center horizontally */\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3         \cf2 .circular-frame\cf5  \cf2 img\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 width:\cf5  \cf11 100%\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 height:\cf5  \cf11 100%\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 object-fit:\cf5  \cf7 cover\cf9 ;\cf5  \cf8 /* Ensures the image fills the circular frame without distortion */\cf5 \cb1 \
+\cb3             \cf4 display:\cf5  \cf7 block\cf9 ;\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\
+\cb3         \cf8 /* Rainbow text styling */\cf5 \cb1 \
+\cb3         \cf2 .rainbow-text\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf4 background:\cf5  \cf7 linear-gradient(to\cf5  \cf7 right\cf9 ,\cf5 \cb1 \
+\cb3                 #ef5350\cf9 ,\cf5  \cf8 /* Red */\cf5 \cb1 \
+\cb3                 #f48fb1\cf9 ,\cf5  \cf8 /* Pink */\cf5 \cb1 \
+\cb3                 #ffee58\cf9 ,\cf5  \cf8 /* Yellow */\cf5 \cb1 \
+\cb3                 #66bb6a\cf9 ,\cf5  \cf8 /* Green */\cf5 \cb1 \
+\cb3                 #29b6f6\cf9 ,\cf5  \cf8 /* Blue */\cf5 \cb1 \
+\cb3                 #9c27b0  \cf8 /* Purple */\cf5 \cb1 \
+\cb3             \cf7 )\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 -webkit-background-clip:\cf5  \cf7 text\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 -webkit-text-fill-color:\cf5  \cf7 transparent\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 background-clip:\cf5  \cf7 text\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 text-fill-color:\cf5  \cf7 transparent\cf9 ;\cf5 \cb1 \
+\cb3             \cf4 display:\cf5  \cf7 inline-block\cf9 ;\cf5  \cf8 /* Required for gradient to work on inline elements */\cf5 \cb1 \
+\cb3             \cf4 background-size:\cf5  \cf11 400%\cf5  \cf11 100%\cf9 ;\cf5  \cf8 /* Make background larger than text for animation */\cf5 \cb1 \
+\cb3             \cf4 animation:\cf5  \cf7 text-rainbow-animation\cf5  \cf11 8s\cf5  \cf7 ease\cf5  \cf7 infinite\cf9 ;\cf5  \cf8 /* Apply text specific animation */\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\
+\cb3         \cf8 /* Keyframe animation for the background gradient */\cf5 \cb1 \
+\cb3         \cf12 @keyframes\cf5  \cf7 gradient-animation\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf11 0%\cf5  \cf9 \{\cf5 \cb1 \
+\cb3                 \cf4 background-position:\cf5  \cf11 0%\cf5  \cf11 0%\cf9 ;\cf5  \cf8 /* Start top-left */\cf5 \cb1 \
+\cb3             \cf9 \}\cf5 \cb1 \
+\cb3             \cf11 50%\cf5  \cf9 \{\cf5 \cb1 \
+\cb3                 \cf4 background-position:\cf5  \cf11 100%\cf5  \cf11 100%\cf9 ;\cf5  \cf8 /* Move to bottom-right */\cf5 \cb1 \
+\cb3             \cf9 \}\cf5 \cb1 \
+\cb3             \cf11 100%\cf5  \cf9 \{\cf5 \cb1 \
+\cb3                 \cf4 background-position:\cf5  \cf11 0%\cf5  \cf11 0%\cf9 ;\cf5  \cf8 /* Loop back to top-left */\cf5 \cb1 \
+\cb3             \cf9 \}\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\
+\cb3         \cf8 /* Keyframe animation for the rainbow text gradient */\cf5 \cb1 \
+\cb3         \cf12 @keyframes\cf5  \cf7 text-rainbow-animation\cf5  \cf9 \{\cf5 \cb1 \
+\cb3             \cf11 0%\cf5  \cf9 \{\cf5 \cb1 \
+\cb3                 \cf4 background-position:\cf5  \cf11 0%\cf5  \cf11 50%\cf9 ;\cf5 \cb1 \
+\cb3             \cf9 \}\cf5 \cb1 \
+\cb3             \cf11 100%\cf5  \cf9 \{\cf5 \cb1 \
+\cb3                 \cf4 background-position:\cf5  \cf11 100%\cf5  \cf11 50%\cf9 ;\cf5 \cb1 \
+\cb3             \cf9 \}\cf5 \cb1 \
+\cb3         \cf9 \}\cf5 \cb1 \
+\cb3     \cf6 </\cf2 style\cf6 >\cf5 \cb1 \
+\cf6 \cb3 </\cf2 head\cf6 >\cf5 \cb1 \
+\cf6 \cb3 <\cf2 body\cf5  \cf4 class\cf6 =\cf7 "text-white"\cf6 >\cf5 \cb1 \
+\cb3     \cf8 <!-- The gradient and its animation are now defined directly in the CSS for the body -->\cf5 \cb1 \
+\
+\cb3     \cf8 <!-- Container for image, text, and widget to maintain overall centering -->\cf5 \cb1 \
+\cb3     \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "flex flex-col items-center justify-center p-4"\cf6 >\cf5 \cb1 \
+\cb3         \cf8 <!-- Circular Image Frame -->\cf5 \cb1 \
+\cb3         \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "circular-frame"\cf6 >\cf5 \cb1 \
+\cb3             \cf8 <!-- Using a generic placeholder image as discussed -->\cf5 \cb1 \
+\cb3             \cf6 <\cf2 img\cf5  \cf4 src\cf6 =\cf7 "https://placehold.co/128x128/f0f0f0/333333?text=Your+Image+Here"\cf5  \cf4 alt\cf6 =\cf7 "AI Agent Picture Placeholder"\cf6 >\cf5 \cb1 \
+\cb3         \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\
+\cb3         \cf8 <!-- Styled Text Section -->\cf5 \cb1 \
+\cb3         \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "max-w-xl mb-8"\cf6 >\cf5 \cb1 \
+\cb3             \cf6 <\cf2 h2\cf5  \cf4 class\cf6 =\cf7 "font-permanent-marker text-4xl drop-shadow-lg mb-4 leading-tight"\cf6 >\cf5 \cb1 \
+\cb3                 \cf6 <\cf2 span\cf5  \cf4 class\cf6 =\cf7 "rainbow-text"\cf6 >\cf5 Interact with AvaX Machina!\cf6 </\cf2 span\cf6 >\cf5 \cb1 \
+\cb3             \cf6 </\cf2 h2\cf6 >\cf5 \cb1 \
+\cb3             \cf6 <\cf2 p\cf5  \cf4 class\cf6 =\cf7 "font-comfortaa text-lg text-purple-200 leading-relaxed px-4"\cf6 >\cf5 \cb1 \
+\cb3                 Hey there, gorgeous! Welcome to chat with AvaX Machina! Get ready to dive into a world where AI meets allure, and every byte is designed to delight. We're about to turn up the heat and explore fantasies like never before. Are you ready to play? Let's get this party started!\cb1 \
+\cb3             \cf6 </\cf2 p\cf6 >\cf5 \cb1 \
+\cb3         \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\
+\cb3         \cf8 <!-- ElevenLabs ConvAI Widget -->\cf5 \cb1 \
+\cb3         \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "widget-sizer"\cf6 >\cf5 \cb1 \
+\cb3             \cf6 <\cf2 elevenlabs-convai\cf5  \cf4 agent-id\cf6 =\cf7 "agent_01jx0wa8gfeq49yyxr2pyp8kcx"\cf6 ></\cf2 elevenlabs-convai\cf6 >\cf5 \cb1 \
+\cb3         \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\cb3     \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\
+\cf6 \cb3 </\cf2 body\cf6 >\cf5 \cb1 \
+\cf6 \cb3 </\cf2 html\cf6 >\cf5 \cb1 \
+\
+}
