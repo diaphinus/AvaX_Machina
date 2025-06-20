@@ -3,110 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElevenLabs AI Agent</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter, Permanent Marker, Comfortaa -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <!-- ElevenLabs ConvAI Widget Embed Script -->
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            /* Complex multi-color gradient for the background */
-            background: linear-gradient(135deg, #881337, #5b21b6, #0891b2, #d97706, #4f46e5, #be185d, #a21caf, #0e7490, #f59e42, #9333ea, #818cf8, #f43f5e, #eab308, #22d3ee, #a3e635, #f472b6);
-            background-size: 400% 400%;
-            animation: gradient-animation 15s ease infinite;
-        }
-        .font-permanent-marker {
-            font-family: 'Permanent Marker', cursive;
-        }
-        .font-comfortaa {
-            font-family: 'Comfortaa', cursive;
-        }
-        html, body {
-            height: 100vh; /* Ensure full viewport height */
-            margin: 0;
-            padding: 0; /* Remove default body padding */
-            display: flex; /* Make body a flex container */
-            flex-direction: column; /* Stack children vertically */
-            justify-content: flex-start; /* Align content from the top */
-            align-items: center; /* Center content horizontally */
-            text-align: center; /* Center text within body */
-            padding-top: 50px; /* Push content down from the top */
-        }
-        .widget-sizer {
-            width: 90%;
-            max-width: 600px;
-            /* Responsive height for the widget area */
-            height: clamp(400px, 65vh, 600px);
-            overflow: hidden;
-            position: relative;
-        }
-        elevenlabs-convai {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        .circular-frame {
-            width: 128px;
-            height: 128px;
-            border-radius: 9999px;
-            overflow: hidden;
-            border: 4px solid white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            margin-bottom: 1.5rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .circular-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .rainbow-text {
-            background: linear-gradient(to right, #ef5350, #f48fb1, #ffee58, #66bb6a, #29b6f6, #9c27b0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            display: inline-block;
-            background-size: 400% 100%;
-            animation: text-rainbow-animation 8s ease infinite;
-        }
-        @keyframes gradient-animation {
-            0% {background-position: 0% 0%;}
-            50% {background-position: 100% 100%;}
-            100% {background-position: 0% 0%;}
-        }
-        @keyframes text-rainbow-animation {
-            0% {background-position: 0% 50%;}
-            100% {background-position: 100% 50%;}
-        }
-    </style>
+    <title>AvaX_Machina Subscription</title>
 </head>
-<body class="bg-gradient-to-br from-pink-600 to-rose-900">
-    <!-- Container for image, text, and widget. Added text-white class here. -->
-    <div class="flex flex-col items-center justify-center p-4 text-white">
-        <!-- Circular Image Frame -->
-<div class="circular-frame">
-    <img src="Ava.jpg" alt="AI Agent Picture">
-</div>
-        </div>
-        <!-- Styled Text Section -->
-        <div class="max-w-xl mb-8">
-            <h2 class="font-permanent-marker text-4xl drop-shadow-lg mb-4 leading-tight">
-                <span class="rainbow-text">Interact with AvaX Machina</span>
-            </h2>
-            <p class="font-comfortaa text-lg text-purple-200 leading-relaxed px-4">
-                Hey there, gorgeous! Welcome to chat with AvaX Machina! Get ready to dive into a world where AI meets allure, and every byte is designed to delight. We're about to turn up the heat!
-            </p>
-        </div>
-        <!-- ElevenLabs ConvAI Widget -->
-        <div class="widget-sizer">
-            <elevenlabs-convai agent-id="agent_01jx0wa8gfeq49yyxr2pyp8kcx"></elevenconvai>
-        </div>
+<body>
+    <h1>Choose Your Subscription Plan</h1>
+    <p>Unlock premium features with our monthly subscription.</p>
+
+    <div style="max-width: 300px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; text-align: center;">
+        <h2>Premium Plan</h2>
+        <p>Access to all AvaX_Machina features, unlimited queries.</p>
+        <p><strong>$X.XX/month</strong></p>
+        <div id="paypal-button-container-P-7RG75175XD3884154NBK4J2Q"></div>
     </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+    <script>
+        // Replace 'YOUR_PAYPAL_CLIENT_ID' and 'YOUR_BACKEND_API_URL'
+        const PAYPAL_PLAN_ID = 'P-7RG75175XD3884154NBK4J2Q'; // Your plan ID from PayPal
+        const YOUR_BACKEND_API_URL = 'https://your-serverless-domain.com/api/paypal-subscription-approved';
+
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'subscribe'
+            },
+            createSubscription: function(data, actions) {
+                return actions.subscription.create({
+                    plan_id: PAYPAL_PLAN_ID
+                });
+            },
+            onApprove: function(data, actions) {
+                const userAuthToken = localStorage.getItem('userAuthToken');
+                if (!userAuthToken) {
+                    alert('You must be logged in to subscribe.');
+                    return;
+                }
+                fetch(YOUR_BACKEND_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${userAuthToken}`
+                    },
+                    body: JSON.stringify({
+                        paypalSubscriptionID: data.subscriptionID,
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(err => { throw new Error(err.message || 'Server error'); });
+                    }
+                    return response.json();
+                })
+                .then(serverData => {
+                    if (serverData.success) {
+                        alert('Subscription successful! You now have premium access.');
+                        window.location.href = '/dashboard?status=subscribed';
+                    } else {
+                        alert(`Subscription failed: ${serverData.message}. Please contact support.`);
+                    }
+                })
+                .catch(error => {
+                    alert('An unexpected error occurred during subscription. Please try again.');
+                });
+            },
+            onCancel: function(data) {
+                alert('Subscription process cancelled.');
+            },
+            onError: function(err) {
+                alert('An error occurred with the PayPal button. Please try again.');
+            }
+        }).render('#paypal-button-container-P-7RG75175XD3884154NBK4J2Q');
+    </script>
 </body>
 </html>
